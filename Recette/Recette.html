@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <h1>"La liste des ingrédients d'une pseudo Carbonara"</h1>
+    </head>
+<body>
+<h2><U>Première étape de l'exercice</U></h2>
+    <script>
+        //Introduction
+        let motivation = prompt("Prêt à massacrer la carbonara?","Oui / Non")
+        let ingredient = ["Pâtes", "Oeuf", "Sel", "Poivre", "Lardon", "Oignon", "Parmesan"];
+        let quantite = ingredient.length
+        let phraseNbrIngredient = "<h3>" + "Nombre d'ingrédients nécessaire : " + quantite + "</h3>";
+        document.body.innerHTML += phraseNbrIngredient
+    </script>
+
+<h2><U>Deuxième étape de l'exercice</U></h2>  
+
+    <p id="arraysId"></p>
+    <script>
+       function showArray(array) {
+      for (var i = 0; i < array.length; i++) {
+        document.getElementById('arraysId').innerText += array[i] 
+        document.getElementById('arraysId').innerText += " , "
+      }
+    }
+    showArray(ingredient)
+    </script>
+
+<h2><U>Troisième étape de l'exercice</U></h2>
+
+    <p id="numberArray"></p>
+    <script>
+        function showArray(array) {
+      for (var i = 0; i < array.length; i++) {
+        document.getElementById('numberArray').innerText += i + 1
+        document.getElementById('numberArray').innerText += "."
+        document.getElementById('numberArray').innerText += array[i]
+        document.getElementById('numberArray').innerText += "\n"
+      }
+    }
+    showArray(ingredient)
+    </script>
+
+<h2><U>Quatrième étape de l'exercice</U></h2>
+
+    <p id="alphaArray"></p>
+    <script>
+        ingredient = ingredient.sort() 
+        function showArray(array) {
+      for (var i = 0; i < array.length; i++) {
+        document.getElementById('alphaArray').innerText += array[i]
+        document.getElementById('alphaArray').innerText += "\n"
+      }
+    }
+    showArray(ingredient)
+    </script>
+</body>
+</html>
